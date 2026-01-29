@@ -1,0 +1,16 @@
+model Sale {
+    id          String     @id @default(uuid())
+    totalAmount Float
+    createdAt   DateTime   @default(now())
+    saleItems   SaleItem[]
+}
+
+model SaleItem {
+    id        String  @id @default(uuid())
+    saleId    String
+    productId String
+    quantity  Int
+    price     Float
+    sale      Sale    @relation(fields: [saleId], references: [id])
+    product   Product @relation(fields: [productId], references: [id])
+}
