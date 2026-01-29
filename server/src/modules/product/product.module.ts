@@ -5,7 +5,7 @@ import { JwtService } from '@nestjs/jwt';
 import { ConfigService } from '@nestjs/config';
 
 @Module({
-    controllers: [ProductController],
-    providers: [ProductService, JwtService, ConfigService],
+  controllers: [ProductController],
+  providers: [ProductService, JwtService, ConfigService],
 })
-export class ProductModule { }
+export class ProductModule {}

@@ -7,4 +7,4 @@ import { SaleModule } from './modules/sale/sale.module.js';
 @Module({
   imports: [PrismaModule, AuthModule, ProductModule, SaleModule],
 })
-export class AppModule { }
+export class AppModule {}
