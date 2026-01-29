@@ -1,0 +1,267 @@
+{
+  "info": {
+    "_postman_id": "75060e0f-f3cb-41d0-a785-427d36f4d104",
+    "name": "NanoPOS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28447212"
+  },
+  "item": [
+    {
+      "name": "product",
+      "item": [
+        {
+          "name": "create product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Mechanical Keyboard\",\r\n    \"sku\": \"KB-992\",\r\n    \"price\": 1230,\r\n    \"stock_quantity\": 20\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5200/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5200",
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get product by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5200/products/d146b72f-5317-40a0-b5fa-bb956770487b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5200",
+              "path": [
+                "products",
+                "d146b72f-5317-40a0-b5fa-bb956770487b"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update a product",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"price\": 2190\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5200/products/2e2b3738-b8a1-40c4-bb4d-d1b0a78bbf87",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5200",
+              "path": [
+                "products",
+                "2e2b3738-b8a1-40c4-bb4d-d1b0a78bbf87"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5200/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5200",
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete a product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5200/products/d146b72f-5317-40a0-b5fa-bb956770487b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5200",
+              "path": [
+                "products",
+                "d146b72f-5317-40a0-b5fa-bb956770487b"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"AHR\",\r\n    \"email\": \"ahr@email.com\",\r\n    \"password\": \"123456\"\r\n    //\"role\": \"ADMIN\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5200/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5200",
+              "path": [
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"admin@email.com\",\r\n    \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5200/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5200",
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5200/auth/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5200",
+              "path": [
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get auth me",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5200/auth/me",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5200",
+              "path": [
+                "auth",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "sales",
+      "item": [
+        {
+          "name": "create a sale",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"items\": [\r\n    {\r\n      \"productId\": \"2e2b3738-b8a1-40c4-bb4d-d1b0a78bbf87\", \r\n      \"quantity\": 2\r\n    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5200/sales",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5200",
+              "path": [
+                "sales"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
