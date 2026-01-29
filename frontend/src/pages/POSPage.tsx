@@ -33,7 +33,7 @@ interface CartItem extends Product {
 const POSPage: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [cart, setCart] = useState<CartItem[]>([]);
-    const { data: products, isLoading } = useProducts();
+    const { data: products } = useProducts();
     const createSale = useCreateSale();
 
     const filteredProducts = products?.filter(p => 
